@@ -5,7 +5,8 @@ export function request(config){
   // return new Promise((resolve,reject) =>{
     // 1.创建axios实例
     const instance = axios.create({   
-      baseURL:'http://123.207.32.32:8000',
+      baseURL:'http://152.136.185.210:8000/api/n3',
+      // baseURL:'http://123.207.32.32:8000',
       timeout:5000
     })
 
@@ -20,7 +21,7 @@ export function request(config){
     instance.interceptors.response.use(res =>{
       return res.data 
     },err =>{
-      console.log(err);
+      console.log("request失败");
     })
 
     // 3.发送真正的网络请求

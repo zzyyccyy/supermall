@@ -6,3 +6,14 @@ export function getHomeMD(){
     // 这个函数返回值是promise
   })
 }
+
+export function getHomeGoods(type,page){
+  return request({
+    url:'/home/data',
+    params:{
+      type,
+      page
+    }
+  })
+
+}
